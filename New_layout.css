@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Hahmlet:wght@200&family=IBM+Plex+Sans+KR:wght@100;400&family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Nanum+Myeongjo&display=swap');
+* {
+    font-family: 'Gothic A1', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.swiper {
+    width: 100vw;
+    height: 100vh;
+}
+
+.swiper-slide {
+    background-color: lightsalmon;
+    color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+.h1 {
+    font-size: 40px;
+    
+    width: 600px;
+    height: 400px;
+    margin: 200px auto 0px auto; 
+    line-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: url('https://velog.velcdn.com/images/juwon0629/post/7427c58d-1fe3-4a86-bd1e-9a24640cea9e/image.png');
+    background-position: center;
+    background-size: cover;
+    
+}
+.main_image {
+    position: relative;
+    margin-top: 250px;
+  }
+  .main_image_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    color: lightsalmon;
+  }
+  .main_image1 {
+    position: relative;
+    margin-top: 250px;
+  }
+  .main_image_text1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    color: white;
+  }

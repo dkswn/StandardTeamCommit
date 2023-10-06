@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="New_layout.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+
+            <!-- Slides -->
+
+            <div class="swiper-slide">
+                <div class="h1">
+                    <h1>CODE-JJAJO</h1>
+                </div>
+                <h3 class="namemean">코드를 짜야하는 개발자의 운명과 누군가 좋은 코드를 짜주었으면 하는 바램,
+                    <p> 이중적인 의미가 담겨서 탄생한 코드짜조</p>
+                </h3>
+            </div>
+            <div class="swiper-slide">
+                우리팀의 특징
+                <div class="main_image">
+                    <img src="https://velog.velcdn.com/images/juwon0629/post/fdbf7c4f-b0c9-4858-87ee-7253d5485d4b/image.PNG"
+                        width="800px" height="300px">
+
+                    <h1 class="main_image_text" style="font-size:60px">"I" 같지 않은 어른들, <p>meeting manias</p>
+                    </h1>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                목표
+                <div class="main_image1">
+                    <img src="https://velog.velcdn.com/images/juwon0629/post/c333ca3c-9225-432f-857e-e7fd358cec65/image.PNG"
+                        width="870px" height="250px">
+
+                    <h1 class="main_image_text1" style="font-size:60px">취업해서 개발자로 살아남기</h1>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div>
+                    <h1>13~14 점심, 18~19 저녁</h1>
+                    <h1>9:10/19:10 meeting</h1>
+                    <h1>결석이나 지각은 미리 말하기</h1>
+                    <h1>모르는 것은 부담없이 질문하기</h1>
+                    <h1>예쁜 말투로 대화하기</h1>
+                    <h1>아이디어가 있다면 일단 말하기!</h1>
+                    <h1>주석 습관화!</h1>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <h1> 조 이름과는 다르게, 코드 짜주는 사람이 되자!</h1></div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+
+</body>
+
+</html>
