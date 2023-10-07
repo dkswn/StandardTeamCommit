@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+    * {
+        font-family: 'Gowun Dodum', sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .swiper {
+        width: 100vw;
+        height: 100vh;
+
+    }
+
+    .swiper-slide {
+        background-color: lightsalmon;
+        color: white;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .img1 {
+        width: 400px;
+        height: 400px;
+        margin: 50% auto, 50%, 10px;
+    }
+
+
+    .h1 {
+        font-size: 48px;
+        font-weight: bold;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15%;
+    }
+
+    .texthead1 {
+        font-size: 68px;
+        font-weight: bold;
+
+        width: 600px;
+        height: 300px;
+
+        margin: 10px auto auto 10px;
+
+    }
+
+    .textwrap {
+
+        width: 100vw;
+        height: 100vh;
+
+    }
+
+    .text1 {
+        font-size: 64px;
+        font-weight: bold;
+
+        width: 900px;
+        height: 150px;
+
+        margin: 5% auto auto 10%;
+
+    }
+
+    .text2 {
+        font-size: 72px;
+        font-weight: bold;
+
+        width: 550px;
+        height: 150px;
+
+        margin: 0 auto auto 60%;
+
+
+    }
+
+
+    .texthead2 {
+
+        font-size: 68px;
+        font-weight: bold;
+
+        width: 400px;
+        height: 300px;
+
+        margin: 10px auto auto 10px;
+
+    }
+
+    .text-box {
+        width: 1000px;
+        height: 200px;
+
+        font-size: 64px;
+        font-weight: bold;
+
+        align-items: center;
+        justify-content: center;
+
+        margin: 50px auto auto auto;
+
+    }
+</style>
+
+<body>
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <div class="h1">
+                    <h1>코드 짜조 !
+                        <div class="img1"><img src="danbi1.png" class="img1" alt="img1"></div>
+                    </h1>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="texthead1">
+                    <h1>
+                        About Us
+                    </h1>
+                </div>
+                <div class="textwrap">
+                    <div class="text1">
+                        수상할 정도로..회의를 좋아하는..
+                    </div>
+                    <div class="text2">
+                        프로 의사소통러!
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="texthead2">
+                    <h1>
+                        Goals
+                    </h1>
+                </div>
+
+                <div class="text-box" data-trigger>
+                    <span class="typingtext"></span>
+                </div>
+
+            </div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+</body>
+<script>
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+
+    const content = "취업해서 개발자로 살아남기!!";
+    const text = document.querySelector(".typingtext");
+    let i = 0;
+
+    function typing() {
+        let txt = content[i++];
+        text.innerHTML += txt;
+        if (i > content.length) {
+            text.textContent = "";
+            i = 0;
+        }
+    }
+    setInterval(typing, 250)
+</script>
+
+</html>
