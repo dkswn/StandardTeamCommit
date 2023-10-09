@@ -155,11 +155,9 @@ text-align: center; /* Center-align the text within the buttons */
 .text1 {
     font-size: 64px;
     font-weight: bold;
-
     width: 900px;
     height: 150px;
-
-    margin: 5% auto auto 10%;
+    margin: 2% auto; 
 
 }
 
@@ -373,4 +371,7 @@ text-align: center; /* Center-align the text within the buttons */
     -webkit-transform: translateY(-13.5px) rotate(40.5deg);
     -ms-transform: translateY(-13.5px) rotate(40.5deg);
     transform: translateY(-13.5px) rotate(40.5deg);
+  }
+  .card-link{
+
   }

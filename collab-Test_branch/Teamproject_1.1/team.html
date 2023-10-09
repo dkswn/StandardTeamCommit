@@ -11,35 +11,6 @@
     
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-    <script type="module">
-        // Firebase SDK 라이브러리 가져오기
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
-        import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-        import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-        import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-        
-
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-            apiKey: "AIzaSyBmcZ867Tqr2gSZYmkwOpK4bOYkDV12Ai0",
-            authDomain: "teamintro-57362.firebaseapp.com",
-            projectId: "teamintro-57362",
-            storageBucket: "teamintro-57362.appspot.com",
-            messagingSenderId: "319787069466",
-            appId: "1:319787069466:web:37934e5388cf146e1121a3",
-            measurementId: "G-8VLGP4RQ38"
-        };
-
-
-        // Firebase 인스턴스 초기화
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-
-        $("#id").click(async function () {
-            let doc = {};
-            await addDoc(collection(db, "콜렉션이름"), doc);
-        })
-    </script>
 </head>
 <body>
 
@@ -81,7 +52,7 @@
                             <li class="list-group-item">INFP</li>
                         </ul>
                         <div class="card-body">
-                            <a href="#" class="card-link">link Here</a>
+                            <a href="https://velog.io/@doroome246" class="card-link">Blog</a>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
@@ -92,7 +63,7 @@
                             <li class="list-group-item">ISTP</li>
                         </ul>
                         <div class="card-body">
-                            <a href="#" class="card-link">link Here</a>
+                            <a href="https://velog.io/@juwon0629" class="card-link">Blog</a>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
@@ -103,7 +74,7 @@
                             <li class="list-group-item">ISFJ</li>
                         </ul>
                         <div class="card-body">
-                            <a href="#" class="card-link">link Here</a>
+                            <a href="https://www.notion.so/dkswnsvy/a9cd03a2bb164f419cc21fa56043f900?v=0119b2c7b7be4d31acbac96dea340c1a&showMoveTo=true&saveParent=true" class="card-link">Blog</a>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
@@ -114,7 +85,7 @@
                             <li class="list-group-item">ENTJ</li>
                         </ul>
                         <div class="card-body">
-                            <a href="#" class="card-link">link Here</a>
+                            <a href="https://velog.io/@loveytheb" class="card-link">Blog</a>
                         </div> 
                     </div>
                 </div>
@@ -128,10 +99,6 @@
                 </div>
                 <div class="textwrap">
                     <div class="text1">
-                        수상할 정도로..회의를 좋아하는..
-                    </div>
-                    <div class="text2">
-                        프로 의사소통러!
                     </div>
                 </div>
             </div>
@@ -151,6 +118,7 @@
         direction: 'horizontal',
         spaceBetween: 30,
       centeredSlides: true,
+      loop: true,
         // If we need pagination
         pagination: {
             el: '.swiper-pagination', // 하단 페이지 목록 
@@ -161,6 +129,19 @@
         prevEl: ".swiper-button-prev"  //이전
       },
     });
+    const content = "수상할 정도로..회의를 좋아하는..    프로 의사소통러!";
+    const text = document.querySelector(".text1", ".text2");
+    let i = 0;
+
+    function typing() {
+        let txt = content[i++];
+        text.innerHTML += txt;
+        if (i > content.length) {
+            text.textContent = "";
+            i = 0;
+        }
+    }
+    setInterval(typing, 250)
     document  // 해당 페이지 click actionList
       .querySelector('.Slide-1')
       .addEventListener('click', function (e) {
