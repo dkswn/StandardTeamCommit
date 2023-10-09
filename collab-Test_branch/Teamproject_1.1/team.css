@@ -29,6 +29,28 @@ background-color: lightsalmon;
   
     /* 단비 이미지 조절 */
 }
+/* 팀 제목 동물 이미지 css */
+.imgwrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.imgmonkey {
+  transform: rotate(-25deg); /* Adjust the angle as needed */
+}
+.imgchicken {
+  transform: rotate(15deg); /* Adjust the angle as needed */
+}
+.imgbunny {
+  transform: rotate(-15deg); /* Adjust the angle as needed */
+}
+.imgtiger {
+  transform: rotate(25deg); /* Adjust the angle as needed */
+}
+
 
 
 
@@ -372,6 +394,107 @@ text-align: center; /* Center-align the text within the buttons */
     -ms-transform: translateY(-13.5px) rotate(40.5deg);
     transform: translateY(-13.5px) rotate(40.5deg);
   }
-  .card-link{
+  /* 약속 css */
+  .main_image1 {
+    position: relative;
+    margin-top: 55px;
+}
 
-  }
+.main_text1 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: lightsalmon;
+
+    text-align: left;
+    font-size: 22px;
+}
+
+.main_image2 {
+  position: relative;
+  margin-top: 280px;
+}
+
+.main_text2 {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: lightsalmon;
+
+  font-size: 32px;
+}
+
+/*  팀원 상세 페이지 css */
+.main_image_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50% );
+  color: lightsalmon;
+}
+.div1{
+  width: 100%;
+  height: 100%;
+}
+.left{
+  width: 35%;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+  background-color:lightsalmon;
+  margin-top :px;
+}
+.right{
+  width: 65%;
+  height: 100%;
+  float: right;
+  box-sizing: border-box;
+  background-color: rgb(255, 223, 210);
+}
+.mycard{
+  width: 900px;
+  height: 600px;
+  margin-left: px;
+  background-image: url(https://velog.velcdn.com/images/juwon0629/post/2e44e333-ae4c-4264-a543-73112814350f/image.PNG);
+  background-position: center;
+  background-size: cover;
+}
+.h1name{
+  font-size: 60px;
+  width: 180px;
+  margin-top: 100px;
+  margin-left: 70px;
+  color: rgb(242, 165, 135);
+  padding-top: 60px;
+}
+.h1mbti{
+  font-size: 30px;
+  background-color: lightsalmon;
+  width: 130px;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-left: 70px;
+}
+.h1mbti1{
+  font-size: 30px;
+  width: 180px;
+  background-color: lightsalmon;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-left: 70px;
+}
+.textbox{
+  text-align: left;
+  line-height: 60px;
+  width: 900px;
+  margin-top: 40px;
+  margin-left: 70px;
+  font-size: 17px;
+}
+.icon{
+  width: 100px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
