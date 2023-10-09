@@ -1,129 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="team.css">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Hahmlet:wght@200&family=IBM+Plex+Sans+KR:wght@100;400&family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Nanum+Myeongjo&display=swap');
-
-        * {
-            font-family: 'Gothic A1', sans-serif;
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
+    <script type="module">
+        // Firebase SDK 라이브러리 가져오기
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+        import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+        import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 
 
-        .swiper {
-            width: 100vw;
-            height: 100vh;
-        }
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyBmcZ867Tqr2gSZYmkwOpK4bOYkDV12Ai0",
+            authDomain: "teamintro-57362.firebaseapp.com",
+            projectId: "teamintro-57362",
+            storageBucket: "teamintro-57362.appspot.com",
+            messagingSenderId: "319787069466",
+            appId: "1:319787069466:web:37934e5388cf146e1121a3",
+            measurementId: "G-8VLGP4RQ38"
+        };
 
-        .swiper-slide {
-            background-color: lightsalmon;
-            color: white;
-            text-align: center;
-            justify-content: center;
-        }
 
-        .main_image1 {
-            position: relative;
-            margin-top: 55px;
-        }
+        // Firebase 인스턴스 초기화
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
 
-        .main_text1 {
-            position: absolute;
-            top: 55%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: lightsalmon;
-
-            text-align: left;
-            font-size: 22px;
-        }
-
-        .main_image2 {
-            position: relative;
-            margin-top: 280px;
-        }
-
-        .main_text2 {
-            position: absolute;
-            top: 55%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: lightsalmon;
-
-            font-size: 32px;
-        }
-    </style>
+        $("#id").click(async function () {
+            let doc = {};
+            await addDoc(collection(db, "콜렉션이름"), doc);
+        })
+    </script>
 </head>
 
 <body>
+
+    <!--내용 -->
     <!-- Slider main container -->
     <div class="swiper">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+
+        <p class="append-buttons">
+            <a href="#Slide-1" class="Slide-1">팀제목</a>
+            <a href="#Slide-2" class="Slide-2">팀원들 </a>
+            <a href="#Slide-3" class="Slide-3">About Us</a>
+            <a href="#Slide-4" class="Slide-4">팀원1 상세</a>
+            <a href="#Slide-5" class="Slide-5">팀원2 상세</a>
+            <a href="#Slide-6" class="Slide-6">팀원3 상세</a>
+            <a href="#Slide-7" class="Slide-7">팀원4 상세</a>
+            <a href="#Slide-8" class="Slide-8">마무리</a>
+        </p>
+
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide">약속
-                <div class="main_image1">
-                    <img src="C:\Users\faidi\Desktop\team_img1.png" width="1450px" height="780px">
-                    <div class="main_text1">
-                        <div>
-                            <h1>13~14시 점심시간, 18~19시 저녁시간</h1>
+            <div class="swiper-slide">
+                <div class="maintitle">
+                    <div class="imgwrap">
+                        <div class="imgmonkey"><img src="monkey.png" class="imganimal" alt="img2"></div>
+                        <div class="imgchicken"><img src="chicken.png" class="imganimal" alt="img2"></div>
+                        <div class="imgbunny"><img src="bunny.png" class="imganimal" alt="img2"></div>
+                        <div class="imgtiger"><img src="tiger.png" class="imganimal" alt="img2"></div>
+                    </div>
+                    <a>코드 짜조 !
+                        <div class="img1"><img src="danbi1.png" class="img1" alt="img1"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card-container d-flex">
+                    <div class="card" style="width: 18rem;">
+                        <img src="Kim.png" class="card-img-top" alt="cardimg">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <h4>팀장</h4>
+                            </li>
+                            <li class="list-group-item">김동학</li>
+                            <li class="list-group-item">INFP</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">blog link</a>
                         </div>
-                        <div>
-                            <h1>회의 9시10분, 19시 10분</h1>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="Son.jpeg" class="card-img-top" alt="cardimg">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <h4>팀원</h4>
+                            </li>
+                            <li class="list-group-item">손지원</li>
+                            <li class="list-group-item">ISTP</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">blog link</a>
                         </div>
-                        <div>
-                            <h1>결석이나 지각, 외출 미리 말해주기</h1>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="Ahn.jpg" class="card-img-top" alt="cardimg">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <h4>팀원</h4>
+                            </li>
+                            <li class="list-group-item">안준표</li>
+                            <li class="list-group-item">ISFJ</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">blog link</a>
                         </div>
-                        <div>
-                            <h1>모르는 거 부담없이 질문하기</h1>
-                        </div>
-                        <div>
-                            <h1>예쁜 말투로 대화하기</h1>
-                        </div>
-                        <div>
-                            <h1>아이디어가 생기면 일단 이야기하기</h1>
-                        </div>
-                        <div>
-                            <h1>주석습관화하기</h1>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="Cheon.jpg" class="card-img-top" alt="cardimg">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <h4>팀원</h4>
+                            </li>
+                            <li class="list-group-item">천민정</li>
+                            <li class="list-group-item">ENTJ</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">blog link</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide">캠프 기간 동안, 우리 팀의 다짐
-                <div class="main_image2">
-                    <img src="C:\Users\faidi\Desktop\team_img2.PNG" width="1350px" height="300px">
-                    <div class="main_text2">
-                        <h1>조 이름과는 반대로, <p>코드 짜주는(만드는) 사람 되기</p>
-                        </h1>
+
+            <div class="swiper-slide">
+                <div class="texthead1">
+                    <h1>
+                        About Us
+                    </h1>
+                </div>
+                <div class="textwrap">
+                    <div class="text1">
+                        수상할 정도로..회의를 좋아하는..
+                    </div>
+                    <div class="text2">
+                        프로 의사소통러!
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide">page3</div>
-            <div class="swiper-slide">page4</div>
-            <div class="swiper-slide">page5</div>
+
+            <div class="swiper-slide">팀원1 상세</div>
+            <div class="swiper-slide">팀원2 상세</div>
+            <div class="swiper-slide">팀원3 상세</div>
+            <div class="swiper-slide">팀원4 상세</div>
+            <div class="swiper-slide">마무리
+                <div class="commentbox">
+                    <div class="form-floating mb-3">
+                        <input type="name" class="form-control" id="floatingInput" placeholder="이름">
+                        <label for="floatingInput">이름</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="comment" class="form-control" id="floatingcomment" placeholder="코멘트">
+                        <label for="floatingPassword">코멘트</label>
+                    </div>
+                    <button type="button" class="btn btn-light">입력하기</button>
+                </div>
+                <div class="rowbox">
+                    <div class="row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <div class="commentcard">
+                                <div class="commentcard-body">
+                                    <h4 class="commentname">이름</h4>
+                                    <p class="commentcard-text">코멘트를 남겨주셨어요.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination"></div> <!-- 프레임 하단 카테고리-->
+        </div>
 </body>
 <script>
     const swiper = new Swiper('.swiper', {
         // Optional parameters
         direction: 'horizontal',
-        loop: true,
-
+        spaceBetween: 30,
+        centeredSlides: true,
         // If we need pagination
         pagination: {
-            el: '.swiper-pagination',
+            el: '.swiper-pagination', // 하단 페이지 목록 
+            clickable: true
         },
+        navigation: {
+            nextEl: ".swiper-button-next", //다음
+            prevEl: ".swiper-button-prev"  //이전
+        },
+    });
+    document  // 해당 페이지 click actionList
+        .querySelector('.Slide-1')
+        .addEventListener('click', function (e) {
+            e.preventDefault();
+            swiper.slideTo(0, 0);
+        });
+
+    document
+        .querySelector('.Slide-2')
+        .addEventListener('click', function (e) {
+            e.preventDefault();
+            swiper.slideTo(1, 0);
+        });
+
+    document
+        .querySelector('.Slide-3')
+        .addEventListener('click', function (e) {
+            e.preventDefault();
+            swiper.slideTo(2, 0);
+        });
+
+    document
+        .querySelector('.Slide-4')
+        .addEventListener('click', function (e) {
+            e.preventDefault();
+            swiper.slideTo(3, 0);
+        });
+
+    document
+        .querySelector('.Slide-5')
+        .addEventListener('click', function (e) {
+            e.preventDefault();
+            swiper.slideTo(4, 0);
+        });
+    document
+        .querySelector('.Slide-6')
+        .addEventListener('click', function (e) {
+            e.preventDefault();
+            swiper.slideTo(5, 0);
+        });
+    document
+        .querySelector('.Slide-7')
+        .addEventListener('click', function (e) {
+            e.preventDefault();
+            swiper.slideTo(6, 0);
+        });
+    document
+        .querySelector('.Slide-8')
+        .addEventListener('click', function (e) {
+            e.preventDefault();
+            swiper.slideTo(7, 0);
+        });
+
+
+    // Smooth scroll function
+    function smoothScroll(targetSelector) {
+        const targetElement = document.querySelector(targetSelector);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth',
+            });
+        }
+    }
+
+    // Attach click events to links with the 'append-buttons' class
+    document.querySelectorAll('.append-buttons a').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetClass = link.getAttribute('href');
+            smoothScroll(targetClass);
+        });
     });
 </script>
 
