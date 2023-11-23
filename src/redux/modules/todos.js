@@ -1,6 +1,7 @@
 // import uuid from "react-uuid";
 import shortid from "shortid";
 
+
 const initialState = [
   {
     id: shortid.generate(),
@@ -14,7 +15,8 @@ const initialState = [
 const todos = (state = initialState, action) => {
   switch (action.type) {
     case "ADD_TODO":
-      return; //TODO: 여기 작성
+
+      return state.concat(action.todo) //TODO: 여기 작성
 
     case "DELETE_TODO":
       return; //TODO: 여기 작성
